@@ -9,7 +9,7 @@
 #include "stdlib.h"
 #include "time.h"
 
-void output(int stroka, int stolb, float **massiv)//вывод массива на экран
+void output(int stroka, int stolb, float **massiv)//ГўГ»ГўГ®Г¤ Г¬Г Г±Г±ГЁГўГ  Г­Г  ГЅГЄГ°Г Г­
 {
 
 	for (int i = 0; i < stroka; i++)
@@ -18,7 +18,7 @@ void output(int stroka, int stolb, float **massiv)//вывод массива на экран
 		for (int g = 0; g < stolb; g++)
 		{
 
-			printf("|%.2f| ", massiv[i][g]);
+			printf("|%10.2f| ", massiv[i][g]);
 			printf("     ");
 
 		}
@@ -27,7 +27,7 @@ void output(int stroka, int stolb, float **massiv)//вывод массива на экран
 
 }
 
-float work(int stroka, int stolb, float **massiv) //сортировка массива
+float work(int stroka, int stolb, float **massiv) //Г±Г®Г°ГІГЁГ°Г®ГўГЄГ  Г¬Г Г±Г±ГЁГўГ 
 {
 	float x;
 	for (int i = 0; i < stroka; i++)
@@ -46,10 +46,10 @@ float work(int stroka, int stolb, float **massiv) //сортировка массива
 			}
 		}
 	}
-	printf("\n Произведена сортировка столбцов \n \t__Массив с отсортированными столбцами:__ \n");
+	printf("\n ГЏГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­Г  Г±Г®Г°ГІГЁГ°Г®ГўГЄГ  Г±ГІГ®Г«ГЎГ¶Г®Гў \n \t__ГЊГ Г±Г±ГЁГў Г± Г®ГІГ±Г®Г°ГІГЁГ°Г®ГўГ Г­Г­Г»Г¬ГЁ Г±ГІГ®Г«ГЎГ¶Г Г¬ГЁ:__ \n");
 	output(stroka, stolb, massiv);
-	printf("\n Произвожу сортировку строк \n");
-	printf("\n Произведена сортировка строк \n \t__Полностью отсортированный массив:__ \n");
+	printf("\n ГЏГ°Г®ГЁГ§ГўГ®Г¦Гі Г±Г®Г°ГІГЁГ°Г®ГўГЄГі Г±ГІГ°Г®ГЄ \n");
+	printf("\n ГЏГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­Г  Г±Г®Г°ГІГЁГ°Г®ГўГЄГ  Г±ГІГ°Г®ГЄ \n \t__ГЏГ®Г«Г­Г®Г±ГІГјГѕ Г®ГІГ±Г®Г°ГІГЁГ°Г®ГўГ Г­Г­Г»Г© Г¬Г Г±Г±ГЁГў:__ \n");
 	
 	
 
@@ -74,7 +74,7 @@ float work(int stroka, int stolb, float **massiv) //сортировка массива
 
 
 
-float random_massiv(int stroka, int stolb, float **massiv)//заполнение массива случайными числами
+float random_massiv(int stroka, int stolb, float **massiv)//Г§Г ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г¬Г Г±Г±ГЁГўГ  Г±Г«ГіГ·Г Г©Г­Г»Г¬ГЁ Г·ГЁГ±Г«Г Г¬ГЁ
 {
 
 	srand(time(NULL));
@@ -91,14 +91,14 @@ float random_massiv(int stroka, int stolb, float **massiv)//заполнение массива с
 	return **massiv;
 }
 
-float write_massiv(int stroka, int stolb, float **massiv)//заполнение массива вручную
+float write_massiv(int stroka, int stolb, float **massiv)//Г§Г ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г¬Г Г±Г±ГЁГўГ  ГўГ°ГіГ·Г­ГіГѕ
 {
 	float element;
 	for (int i = 0; i < stroka; i++)
 	{
 		for (int g = 0; g < stolb; g++)
 		{
-			printf("\n Введите элемент массива № [%d] [%d]: ", i, g);
+			printf("\n Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ Г¬Г Г±Г±ГЁГўГ  В№ [%d] [%d]: ", i, g);
 			scanf("%f", &element);
 			massiv[i][g] = element;
 
@@ -108,7 +108,7 @@ float write_massiv(int stroka, int stolb, float **massiv)//заполнение массива вр
 	return **massiv;
 }
 
-int menu()//меню пользователя
+int menu()//Г¬ГҐГ­Гѕ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї
 {
 	int int_m, int_m1, stroka = 0, stolb = 0;
 	float **massiv = NULL;
@@ -117,13 +117,13 @@ int menu()//меню пользователя
 
 	do
 	{
-		printf("\n\t __Меню пользовтеля__\n");
-		printf("1. Ввод данных \n");
-		printf("2. Обработка данных \n");
-		printf("3. Вывод результата на экран \n");
-		printf("4. Выход \n");
+		printf("\n\t __ГЊГҐГ­Гѕ ГЇГ®Г«ГјГ§Г®ГўГІГҐГ«Гї__\n");
+		printf("1. Г‚ГўГ®Г¤ Г¤Г Г­Г­Г»Гµ \n");
+		printf("2. ГЋГЎГ°Г ГЎГ®ГІГЄГ  Г¤Г Г­Г­Г»Гµ \n");
+		printf("3. Г‚Г»ГўГ®Г¤ Г°ГҐГ§ГіГ«ГјГІГ ГІГ  Г­Г  ГЅГЄГ°Г Г­ \n");
+		printf("4. Г‚Г»ГµГ®Г¤ \n");
 
-		printf("\n \t Введите пункт меню: ");
+		printf("\n \t Г‚ГўГҐГ¤ГЁГІГҐ ГЇГіГ­ГЄГІ Г¬ГҐГ­Гѕ: ");
 		scanf("%d", &int_m);
 		switch (int_m)
 		{
@@ -139,17 +139,17 @@ int menu()//меню пользователя
 
 			do
 			{
-				printf("\n Введите количество строк в массиве: ");
+				printf("\n Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г®ГЄ Гў Г¬Г Г±Г±ГЁГўГҐ: ");
 				scanf("%d", &stroka);
 				if (stroka <= 0)
-					printf("\n\t__Количество строк не может быть <= 0!__\n");
+					printf("\n\t__ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г®ГЄ Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј <= 0!__\n");
 			} while (stroka <= 0);
 			do
 			{
-				printf("\n Введите количество столбцов в массиве: ");
+				printf("\n Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ®Г«ГЎГ¶Г®Гў Гў Г¬Г Г±Г±ГЁГўГҐ: ");
 				scanf("%d", &stolb);
 				if (stolb <= 0)
-					printf("\n\t__Количество столбцов не может быть <= 0!__\n");
+					printf("\n\t__ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ®Г«ГЎГ¶Г®Гў Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј <= 0!__\n");
 			} while (stolb <= 0);
 
 			massiv = new float*[stroka];
@@ -159,9 +159,9 @@ int menu()//меню пользователя
 			}
 			do
 			{
-				printf("\n 1. Заполнить массив случайными числами\n");
-				printf("\n 2. Ввести числа самостоятельно\n");
-				printf("\n \t Введите пункт меню: ");
+				printf("\n 1. Г‡Г ГЇГ®Г«Г­ГЁГІГј Г¬Г Г±Г±ГЁГў Г±Г«ГіГ·Г Г©Г­Г»Г¬ГЁ Г·ГЁГ±Г«Г Г¬ГЁ\n");
+				printf("\n 2. Г‚ГўГҐГ±ГІГЁ Г·ГЁГ±Г«Г  Г±Г Г¬Г®Г±ГІГ®ГїГІГҐГ«ГјГ­Г®\n");
+				printf("\n \t Г‚ГўГҐГ¤ГЁГІГҐ ГЇГіГ­ГЄГІ Г¬ГҐГ­Гѕ: ");
 				scanf("%d", &int_m1);
 				switch (int_m1)
 				{
@@ -173,14 +173,14 @@ int menu()//меню пользователя
 					break;
 
 				default:
-					printf("\t\n__Не существует такого пункта меню!__\n");
+					printf("\t\n__ГЌГҐ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ ГІГ ГЄГ®ГЈГ® ГЇГіГ­ГЄГІГ  Г¬ГҐГ­Гѕ!__\n");
 				}
 			} while (int_m1 < 1 || int_m1 > 2);
 			break;
 		case 2:
 			if (massiv == NULL)
 			{
-				printf("\n\t__Сначала введите значения элементов массива!__\n");
+				printf("\n\t__Г‘Г­Г Г·Г Г«Г  ГўГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГї ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¬Г Г±Г±ГЁГўГ !__\n");
 			}
 			else
 			{
@@ -190,7 +190,7 @@ int menu()//меню пользователя
 		case 3:
 			if (massiv == NULL)
 			{
-				printf("\n\t__Сначала введите значения элементов массива!__\n");
+				printf("\n\t__Г‘Г­Г Г·Г Г«Г  ГўГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГї ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¬Г Г±Г±ГЁГўГ !__\n");
 			}
 			else
 			{
@@ -211,7 +211,7 @@ int menu()//меню пользователя
 			return 0;
 			break;
 		default:
-			printf("\t\n__Не существует такго пункта меню!__\n");
+			printf("\t\n__ГЌГҐ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ ГІГ ГЄГЈГ® ГЇГіГ­ГЄГІГ  Г¬ГҐГ­Гѕ!__\n");
 		}
 	} while (int_m != 4);
 
@@ -220,7 +220,7 @@ int menu()//меню пользователя
 
 
 
-int _tmain(int argc, _TCHAR* argv[])//вызывает функцию с меню
+int _tmain(int argc, _TCHAR* argv[])//ГўГ»Г§Г»ГўГ ГҐГІ ГґГіГ­ГЄГ¶ГЁГѕ Г± Г¬ГҐГ­Гѕ
 {
 	setlocale(LC_ALL, "Russian");
 	setlocale(LC_ALL, "ru");
